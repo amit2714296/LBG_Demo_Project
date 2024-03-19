@@ -17,7 +17,6 @@ class DynamicValue<T> {
     typealias CompletionHandler = ((T) -> Void)
     private var observers = [String: CompletionHandler]()
     
-
     /// MARK : - Initializer
     /// - parameter value: generic datasource object
     
@@ -25,9 +24,8 @@ class DynamicValue<T> {
         self.value = value
     }
     
-    
     /// MARK : - Datasource element
-
+    
     var value : T {
         didSet {
             self.notify()

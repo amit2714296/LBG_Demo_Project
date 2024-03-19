@@ -12,7 +12,7 @@ struct CovidDataModel: Codable {
     var covidDataList: [CovidDataList]?
     
     enum CodingKeys: String, CodingKey {
-
+        
         case covidDataList = "rawData"
     }
     
@@ -36,7 +36,7 @@ struct CovidDataList: Codable {
     var lastUpdate, lat, long, confirmed: String?
     var deaths, recovered, active: String?
     
-     init(provinceState: String?, countryRegion: String?, lastUpdate: String?, lat: String?, long: String?, confirmed: String?, deaths: String?, recovered: String?, active: String?) {
+    init(provinceState: String?, countryRegion: String?, lastUpdate: String?, lat: String?, long: String?, confirmed: String?, deaths: String?, recovered: String?, active: String?) {
         self.provinceState = provinceState
         self.countryRegion = countryRegion
         self.lastUpdate = lastUpdate

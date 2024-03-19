@@ -9,7 +9,7 @@ import Alamofire
 import Foundation
 
 class CovidListViewModel {
-   // MARK: - Properties
+    // MARK: - Properties
     
     var apiClient: APIClientProtocol
     var dataSource: GenericDataSource<CovidDataList>?
@@ -49,7 +49,7 @@ extension CovidListViewModel: CovidListViewContract {
     
     func fetchCovidList() {
         let request = APIRouter.covidList
-    
+        
         showLoader = true
         apiClient.performRequest(route: request) { [weak self](response: DataResponse<CovidDataModel>) in
             self?.showLoader = false

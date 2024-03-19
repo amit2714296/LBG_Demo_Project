@@ -16,7 +16,7 @@ class APIClient : APIClientProtocol{
 
     /// Alamofire session manager object with some custom configurations
     
-  var sessionManager: SessionManager = {
+    var sessionManager: SessionManager = {
         let configuration = URLSessionConfiguration.default
         configuration.httpAdditionalHeaders = SessionManager.defaultHTTPHeaders
         configuration.timeoutIntervalForRequest = TimeInterval(60)
@@ -44,5 +44,4 @@ class APIClient : APIClientProtocol{
             completionHandler(response)
         }
     }
-   
 }

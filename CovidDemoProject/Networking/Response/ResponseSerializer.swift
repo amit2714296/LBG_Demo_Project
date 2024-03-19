@@ -16,8 +16,7 @@ extension DataRequest {
     /// completionHandler handles JSON Object T
     @discardableResult func responseObject<T: Decodable>(
         queue: DispatchQueue? = nil,
-        completionHandler: @escaping (DataResponse<T>) -> Void
-        ) -> Self {
+        completionHandler: @escaping (DataResponse<T>) -> Void) -> Self {
         let responseSerializer = DataResponseSerializer<T> { _, response, data, error in
             guard error == nil else { return .failure(error!) }
             
@@ -43,8 +42,7 @@ extension DataRequest {
     /// @Returns - DataRequest
     /// completionHandler handles JSON Array [T]
     @discardableResult func responseCollection<T: Decodable>(
-        queue: DispatchQueue? = nil, completionHandler: @escaping (DataResponse<[T]>) -> Void
-        ) -> Self {
+        queue: DispatchQueue? = nil, completionHandler: @escaping (DataResponse<[T]>) -> Void) -> Self {
         let responseSerializer = DataResponseSerializer<[T]> { _, response, data, error in
             guard error == nil else { return .failure(error!) }
             
