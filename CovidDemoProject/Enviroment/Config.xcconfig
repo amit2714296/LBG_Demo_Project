@@ -1,0 +1,13 @@
+//
+//  Config.xcconfig
+//  CovidDemoProject
+//
+//  Created by Amit Gupta on 17/03/24.
+//
+
+// Configuration settings file format documentation can be found at:
+
+
+// Server URL
+ROOT_URL = https:/$()/coronavirus.m.pipedream.net/
+
